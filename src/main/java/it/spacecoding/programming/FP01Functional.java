@@ -21,7 +21,8 @@ public class FP01Functional {
         // trasformiamo in uno stream
         // per ogni elemento chiamiamo la stampa
         // usiamo un riferimento ad un metodo
-        numbers.stream().forEach(FP01Functional::print);
+        numbers.stream().forEach(FP01Functional::print); // Method Reference
+        // per ogni elemento deve essere chiamato il metodo print
     }
    
 }
