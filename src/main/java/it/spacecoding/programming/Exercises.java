@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Exercises {
     public static void main(String[] args) {
-        List<String> courses = List.of("Spring", "AWS", "Spring Boot","Azure", "Docker");
-        List<Integer> numbers = List.of(2,3,4,5,6,7,8);
+        List<String> courses = List.of("Spring", "AWS", "Spring Boot", "Azure", "Docker");
+        List<Integer> numbers = List.of(2, 3, 4, 5, 6, 7, 8);
         System.out.println("All Courses");
         printCourse(courses);
         System.out.println("Only courses containg Spring");
@@ -15,6 +15,7 @@ public class Exercises {
         System.out.println("Print the cubes of odd numbers");
         printCubesOfOddsNumbers(numbers);
         System.out.println("Print the number of characters in each course name");
+        printCharNumInEachCourse(courses);
     }
 
     // print all courses
@@ -30,18 +31,26 @@ public class Exercises {
                 .forEach(System.out::println);
 
     }
+
     // print courses whose name has atleast 4 letters
-    public static void printCourseAtLeast4(List<String> courses){
+    public static void printCourseAtLeast4(List<String> courses) {
         courses.stream()
-                .filter(course->course.length()>=4)
+                .filter(course -> course.length() >= 4)
                 .forEach(System.out::println);
     }
+
     // print the cubes of odd numbers
-    public static void printCubesOfOddsNumbers(List<Integer> numbers){
+    public static void printCubesOfOddsNumbers(List<Integer> numbers) {
         numbers.stream()
-                .filter(number -> number % 2d !=0)
-                .map(number -> Math.pow(number,3))
+                .filter(number -> number % 2d != 0)
+                .map(number -> Math.pow(number, 3))
                 .forEach(System.out::println);
     }
-    // print the cubes of odd numbers
+
+    // print the number of characters in each course name
+    public static void printCharNumInEachCourse(List<String> courses) {
+        courses.stream()
+                .map(course -> course.length())
+                .forEach(System.out::println);
+    }
 }

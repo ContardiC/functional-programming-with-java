@@ -55,5 +55,6 @@ public class FP01Functional {
                 .map(number -> number * number)
                 .forEach(System.out::println);
     }
+    
 }
 
