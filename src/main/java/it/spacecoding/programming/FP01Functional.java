@@ -23,6 +23,7 @@ public class FP01Functional {
         // usiamo un riferimento ad un metodo
         numbers.stream().forEach(FP01Functional::print); // Method Reference
         // per ogni elemento deve essere chiamato il metodo print
+
     }
    
 }
