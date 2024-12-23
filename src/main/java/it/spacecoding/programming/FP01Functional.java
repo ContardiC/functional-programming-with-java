@@ -11,6 +11,8 @@ public class FP01Functional {
         printAllNumbersInListFunctional(List.of(12, 9, 3, 5, 7, 15));
         System.out.println("Only even numbers");
         printEvenNumbersInListNumbersFunctional(List.of(12, 9, 3, 5, 7, 15));
+        System.out.println("Only odd numbers");
+        printOddNumbersInListNumbersFunctional(List.of(12, 9, 3, 5, 7, 15));
     }
 
     private static void print(int number) {
@@ -36,6 +38,11 @@ public class FP01Functional {
                 .forEach(System.out::println);
         //Filter - Only Allow Even Numbers
 
+    }
+    private static void printOddNumbersInListNumbersFunctional(List<Integer> numbers) {
+        numbers.stream()
+                .filter(number->number%2!=0)
+                .forEach(System.out::println);
     }
 
     private static boolean isEven(int number) {
